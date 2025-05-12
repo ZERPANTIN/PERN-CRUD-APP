@@ -1,2 +1,2 @@
 Diagram of DB:
-![Диаграмма базы данных](images/diagram.webp)
+![Диаграмма базы данных](images/diagram.png)
