@@ -3,7 +3,7 @@ const express = require('express');
 const sequelize = require('./db');
 const models = require('./models/models.js');
 const cors = require('cors');
-const router = require('./routes/index.js');
+const router = require('./routes/index');
 
 const PORT = process.env.PORT || 3000; //Вдруг не стартанёт из .env
 
