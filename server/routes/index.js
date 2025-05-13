@@ -1,5 +1,6 @@
-const Router = require('express')
-const router = new Router()
+const express = require('express')
+const router = express.Router()
+
 const brandRouter = require('./brandRouter')
 const print_technologyRouter = require('./print_technologyRouter')
 const printerRouter = require('./printerRouter')
