@@ -1,4 +1,4 @@
-const Router = require('express')
+const Router = require('express') //test
 const router = new Router()
 const brandRouter = require('./brandRouter')
 const print_technologyRouter = require('./print_technologyRouter')
