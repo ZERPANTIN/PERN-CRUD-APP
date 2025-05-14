@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="Problem with route">
+    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="Routers started working on &quot;crutches&quot;">
+      <change afterPath="$PROJECT_DIR$/server/controllers/brandController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/print_technologyController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/printerController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/userController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/error/ApiError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/middleware/ErrorHandlingMiddleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/brandRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/brandRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/print_technologyRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/print_technologyRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/printerRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/printerRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/userRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +101,8 @@
       <updated>1747081779597</updated>
       <workItem from="1747081780665" duration="2867000" />
       <workItem from="1747084693290" duration="467000" />
-      <workItem from="1747154164363" duration="345000" />
+      <workItem from="1747154164363" duration="8332000" />
+      <workItem from="1747251638718" duration="995000" />
     </task>
     <task id="LOCAL-00001" summary="Начало">
       <option name="closed" value="true" />
@@ -147,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747153492489</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Routers started working on &quot;crutches&quot;">
+      <option name="closed" value="true" />
+      <created>1747154599120</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747154599120</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +181,7 @@
     <MESSAGE value="Начало" />
     <MESSAGE value="The server connects to postrgres" />
     <MESSAGE value="Problem with route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Problem with route" />
+    <MESSAGE value="Routers started working on &quot;crutches&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Routers started working on &quot;crutches&quot;" />
   </component>
 </project>
