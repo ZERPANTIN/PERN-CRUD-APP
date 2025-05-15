@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="Routers started working without &quot;crutches&quot;">
+    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="postrgrass working, all search finished">
+      <change afterPath="$PROJECT_DIR$/server/middleware/authMiddleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/middleware/checkrolemiddleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/printerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/printerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/models.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/brandRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/brandRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/print_technologyRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/print_technologyRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/printerRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/printerRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/userRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747252684167</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="postrgrass working, all search finished">
+      <option name="closed" value="true" />
+      <created>1747308347982</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747308347982</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +201,7 @@
     <MESSAGE value="Problem with route" />
     <MESSAGE value="Routers started working on &quot;crutches&quot;" />
     <MESSAGE value="Routers started working without &quot;crutches&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Routers started working without &quot;crutches&quot;" />
+    <MESSAGE value="postrgrass working, all search finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="postrgrass working, all search finished" />
   </component>
 </project>
