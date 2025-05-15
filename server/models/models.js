@@ -18,10 +18,10 @@ const Printer = sequelize.define('printer', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     name: {type: DataTypes.STRING, unique: true, allowNull: false},
     price: {type: DataTypes.STRING, allowNull: false},
-    rating: {type: DataTypes.INTEGER, defaultValue: 0},
+    popularity: {type: DataTypes.INTEGER, defaultValue: 0},
     img: {type: DataTypes.STRING, allowNull: false},
 })
-const Print_technology = sequelize.define('print_technology', {
+const Print_technologyf = sequelize.define('print_technology', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     name: {type: DataTypes.STRING, unique: true, allowNull: false},
 })
@@ -39,7 +39,7 @@ const Printer_INFO = sequelize.define('printer_info', {
     description: {type: DataTypes.STRING, allowNull: false},
 })
 
-const Print_technology_Brand = sequelize.define('print_technology_brand', {
+const Print_technologyBrand = sequelize.define('print_technology_brand', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
 })
 
@@ -64,8 +64,8 @@ My_printers_INFO.belongsTo(Printer)
 Printer.hasMany(Printer_INFO)
 Printer.belongsTo(Printer)
 
-Print_technology.belongsToMany(Brand, {through: Print_technology_Brand})
-Brand.belongsToMany(Print_technology, {through: Print_technology_Brand})
+Print_technology.belongsToMany(Brand, {through: Print_technologyBrand})
+Brand.belongsToMany(Print_technology, {through: Print_technologyBrand})
 
 
 module.exports = {
@@ -76,7 +76,6 @@ module.exports = {
     Print_technology,
     Brand,
     Popularity,
-    Printer_INFO,
-    Print_technology_Brand
-
+    Print_technologyBrand,
+    Printer_INFO
 }

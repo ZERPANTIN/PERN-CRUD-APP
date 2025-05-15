@@ -1,16 +1,8 @@
 const Router = require('express')
 const router = new Router()
+const brandController = require('../controllers/brandController')
 
-// Заглушка для POST /brand
-router.post('/', (req, res) => {
-    console.log("Получен POST-запрос на /brand", req.body)
-    res.json({message: "Бренд создан (заглушка)"})
-})
-
-// Заглушка для GET /brand
-router.get('/', (req, res) => {
-    console.log("Получен GET-запрос на /brand")
-    res.json([{id: 1, name: "Пример бренда"}])
-})
+router.post('/', brandController.create)
+router.get('/', brandController.getAll)
 
 module.exports = router

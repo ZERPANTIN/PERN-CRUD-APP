@@ -9,6 +9,6 @@ const userRouter = require('./userRouter')
 router.use('/user', userRouter)
 router.use('/print_technology', print_technologyRouter)
 router.use('/brand', brandRouter)
-router.use('/devise', printerRouter)
+router.use('/printer', printerRouter)
 
 module.exports = router
