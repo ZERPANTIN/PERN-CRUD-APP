@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="postrgrass working, all search finished">
-      <change afterPath="$PROJECT_DIR$/server/middleware/authMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/middleware/checkrolemiddleware.js" afterDir="false" />
+    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="now all main backend finish. Add check 4 admin (Only admins can add+edite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/brandRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/brandRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/print_technologyRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/print_technologyRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/printerRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/printerRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/userRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747308347982</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="now all main backend finish. Add check 4 admin (Only admins can add+edite">
+      <option name="closed" value="true" />
+      <created>1747312063963</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747312063963</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +202,7 @@
     <MESSAGE value="Routers started working on &quot;crutches&quot;" />
     <MESSAGE value="Routers started working without &quot;crutches&quot;" />
     <MESSAGE value="postrgrass working, all search finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="postrgrass working, all search finished" />
+    <MESSAGE value="now all main backend finish. Add check 4 admin (Only admins can add+edite" />
+    <option name="LAST_COMMIT_MESSAGE" value="now all main backend finish. Add check 4 admin (Only admins can add+edite" />
   </component>
 </project>
