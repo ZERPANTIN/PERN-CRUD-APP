@@ -4,9 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="start frontend">
+    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="commit some files">
+      <change afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/bigStar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/BrandBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/DeviceItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/DeviceList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/NavBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Pages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/TypeBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/modals/CreateBrand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/modals/CreateDevice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/modals/CreateType.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/http/deviceAPI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/http/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/http/userAPI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Basket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/DevicePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Shop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/store/DeviceStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/store/UserStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.env" beforeDir="false" afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/AppRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AppRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/consts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,13 +102,13 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
+    "nodejs_interpreter_path": "C:/Users/ZERPANTIN/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/18.20.8/node",
     "nodejs_package_manager_path": "npm",
     "npm.Client.executor": "Run",
     "npm.Server.executor": "Run",
     "npm.stars.executor": "Run",
     "npm.start.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "settings.sync",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
@@ -245,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747345224589</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="start frontend">
+      <option name="closed" value="true" />
+      <created>1747347498523</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1747347498523</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +316,7 @@
     <MESSAGE value="now all main backend finish. Add check 4 admin (Only admins can add+edite" />
     <MESSAGE value="test tests" />
     <MESSAGE value="start frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="start frontend" />
+    <MESSAGE value="commit some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit some files" />
   </component>
 </project>

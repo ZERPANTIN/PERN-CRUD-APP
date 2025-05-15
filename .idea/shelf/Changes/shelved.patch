@@ -1,0 +1,30 @@
+Index: server/error/ApiError.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/error/ApiError.js b/server/error/ApiError.js
+new file mode 100644
+--- /dev/null	(date 1747156290924)
++++ b/server/error/ApiError.js	(date 1747156290924)
+@@ -0,0 +1,19 @@
++class ApiError extends Error {
++    constructor(status, message) {
++        super();
++        this.status = status
++        this.message = message
++    }
++
++    static badRequest(message) {
++        return new ApiError(404, message)
++    }
++
++    static internal(message) {
++        return new ApiError(500, message)
++    }
++
++    static forbidden(message) {
++        return new ApiError(403, message)
++    }
++}
+\ No newline at end of file

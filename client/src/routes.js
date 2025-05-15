@@ -1,17 +1,9 @@
-import {
-    ADMIN_ROUTE,
-    LOGIN_ROUTE,
-    MAIN_ROUTE,
-    MYPRINTERS_ROUTE,
-    PRINTER_ROUTE,
-    REGISTRATION_ROUTE
-} from "./utils/consts";
-import MyPrinters from "./pages/MyPrinters";
-import Auth from "./pages/Auth";
-import PrinterPage from "./pages/PrinterPage";
 import Admin from "./pages/Admin";
-import Main from "./pages/Main";
-
+import {ADMIN_ROUTE, BASKET_ROUTE, DEVICE_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE} from "./utils/consts";
+import Basket from "./pages/Basket";
+import Shop from "./pages/Shop";
+import Auth from "./pages/Auth";
+import DevicePage from "./pages/DevicePage";
 
 export const authRoutes = [
     {
@@ -19,15 +11,15 @@ export const authRoutes = [
         Component: Admin
     },
     {
-        path: MYPRINTERS_ROUTE,
-        Component: MyPrinters
+        path: BASKET_ROUTE,
+        Component: Basket
     },
 ]
 
 export const publicRoutes = [
     {
-        path: MAIN_ROUTE,
-        Component: Main
+        path: SHOP_ROUTE,
+        Component: Shop
     },
     {
         path: LOGIN_ROUTE,
@@ -38,7 +30,7 @@ export const publicRoutes = [
         Component: Auth
     },
     {
-        path: PRINTER_ROUTE + '/:id',
-        Component: PrinterPage
+        path: DEVICE_ROUTE + '/:id',
+        Component: DevicePage
     },
 ]
