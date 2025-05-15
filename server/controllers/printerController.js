@@ -1,17 +1,27 @@
 const uuid = require('uuid')
 const path = require('path')
-const {Printer} = require('../models/models')
+const {Printer, Printer_INFO} = require('../models/models')
 const ApiError = require('../error/ApiError')
 
 class PrinterController {
     async create(req, res, next) {
         try {
-            const {name, price, brandId, print_technologyId, info} = req.body
+            let {name, price, brandId, printTechnologyId, info} = req.body
             const {img} = req.files
             let fileName = uuid.v4() + ".jpg"
             img.mv(path.resolve(__dirname, '..', 'static', fileName))
+            const printer = await Printer.create({name, price, brandId, printTechnologyId, img: fileName});
 
-            const printer = await Printer.create({name, price, brandId, print_technologyId, img:fileName})
+            if(info){
+                info = JSON.parse(info)
+                info.forEach(i =>
+                    Printer_INFO.create({
+                        title: i.title,
+                        description: i.description,
+                        printerId: printer.id
+                    })
+                )
+            }
 
             return res.json(printer)
         } catch (e) {
@@ -21,24 +31,34 @@ class PrinterController {
     }
 
     async getAll(req, res) {
-        const {brandId, print_technologyId} = req.query
+        let {brandId, printTechnologyId, limit, page} = req.query
+        page = page || 1
+        limit = limit || 20
+        let offset = page * limit - limit
         let printers
-        if (!brandId && !print_technologyId) {
-            printers = await Printer.findAll()
+        if (!brandId && !printTechnologyId) {
+            printers = await Printer.findAndCountAll({limit, offset})
         }
-        if (brandId && !print_technologyId) {
-            printers = await Printer.findAll({where: {brandId}})
+        if (brandId && !printTechnologyId) {
+            printers = await Printer.findAndCountAll({where: {brandId}, limit, offset})
         }
-        if (!brandId && print_technologyId) {
-            printers = await Printer.findAll({where: {print_technologyId}})
+        if (!brandId && printTechnologyId) {
+            printers = await Printer.findAndCountAll({where: {printTechnologyId}, limit, offset})
         }
-        if (brandId && print_technologyId) {
-            printers = await Printer.findAll({where: {print_technologyId, brandId}})
+        if (brandId && printTechnologyId) {
+            printers = await Printer.findAndCountAll({where: {printTechnologyId, brandId}, limit, offset})
         }
         return res.json(printers)
     }
     async getOne(req, res) {
-
+        const {id} = req.params
+        const printer = await Printer.findOne(
+            {
+                where: {id},
+                include: [{ model: Printer_INFO, as: 'info' }],
+            }
+        )
+        return res.json(printer)
     }
 }
 

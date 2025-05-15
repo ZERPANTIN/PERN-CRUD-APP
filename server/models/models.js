@@ -14,22 +14,35 @@ const My_Printer = sequelize.define('my_Printer', {
 const My_printers_INFO = sequelize.define('my_printers_INFO', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
 })
-const Printer = sequelize.define('printer', {
-    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    name: {type: DataTypes.STRING, unique: true, allowNull: false},
-    price: {type: DataTypes.STRING, allowNull: false},
-    popularity: {type: DataTypes.INTEGER, defaultValue: 0},
-    img: {type: DataTypes.STRING, allowNull: false},
-})
-const Print_technologyf = sequelize.define('print_technology', {
-    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    name: {type: DataTypes.STRING, unique: true, allowNull: false},
-})
 const Brand = sequelize.define('brand', {
-    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    name: {type: DataTypes.STRING, unique: true, allowNull: false},
-})
-const Popularity = sequelize.define('popularity', {
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    name: { type: DataTypes.STRING, unique: true, allowNull: false }
+});
+
+const printTechnology = sequelize.define('printTechnology', {
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    name: { type: DataTypes.STRING, unique: true, allowNull: false }
+});
+
+const Printer = sequelize.define('printer', {
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    name: { type: DataTypes.STRING, allowNull: false },
+    price: { type: DataTypes.INTEGER, allowNull: false },
+    rating: { type: DataTypes.INTEGER, defaultValue: 0 },
+    img: { type: DataTypes.STRING, allowNull: false },
+    // Ключевое изменение - правильные имена внешних ключей:
+    brandId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        field: 'brand_id' // Указываем соответствие с именем в БД
+    },
+    printTechnologyId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        field: 'printTechnologyId' // Соответствие с БД
+    }
+});
+const rating = sequelize.define('rating', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     users: {type: DataTypes.INTEGER, allowNull: false},
 })
@@ -39,33 +52,33 @@ const Printer_INFO = sequelize.define('printer_info', {
     description: {type: DataTypes.STRING, allowNull: false},
 })
 
-const Print_technologyBrand = sequelize.define('print_technology_brand', {
+const printTechnologyBrand = sequelize.define('printTechnology_brand', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
 })
 
 User.hasOne(My_Printer)
 My_Printer.belongsTo(User)
 
-User.hasMany(Popularity)
-Popularity.belongsTo(User)
+User.hasMany(rating)
+rating.belongsTo(User)
 
 My_Printer.hasMany(My_printers_INFO)
 My_Printer.belongsTo(Printer)
 
-Print_technology.hasMany(Printer)
-Printer.belongsTo(Print_technology)
+printTechnology.hasMany(Printer)
+Printer.belongsTo(printTechnology)
 
-Printer.hasMany(Popularity)
-Popularity.belongsTo(Printer)
+Printer.hasMany(rating)
+rating.belongsTo(Printer)
 
 Printer.hasMany(My_printers_INFO)
 My_printers_INFO.belongsTo(Printer)
 
-Printer.hasMany(Printer_INFO)
+Printer.hasMany(Printer_INFO, {as: 'info'})
 Printer.belongsTo(Printer)
 
-Print_technology.belongsToMany(Brand, {through: Print_technologyBrand})
-Brand.belongsToMany(Print_technology, {through: Print_technologyBrand})
+printTechnology.belongsToMany(Brand, {through: printTechnologyBrand})
+Brand.belongsToMany(printTechnology, {through: printTechnologyBrand})
 
 
 module.exports = {
@@ -73,9 +86,9 @@ module.exports = {
     My_Printer,
     My_printers_INFO,
     Printer,
-    Print_technology,
+    printTechnology,
     Brand,
-    Popularity,
-    Print_technologyBrand,
+    rating,
+    printTechnologyBrand,
     Printer_INFO
 }
