@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="test tests">
-      <change afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/AppRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/MyPrinters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/PrinterPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/utils/consts.js" afterDir="false" />
+    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="start frontend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/test/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AppRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AppRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +88,7 @@
       <recent name="C:\Users\ZERPANTIN\Documents\ВУЗ\Web\kursach2.0\server" />
     </key>
   </component>
-  <component name="RunManager" selected="Compound.Full Project">
+  <component name="RunManager" selected="npm.Client">
     <configuration name="Full Project" type="CompoundRunConfigurationType">
       <toRun name="Client" type="js.build_tools.npm" />
       <toRun name="Server" type="js.build_tools.npm" />
@@ -239,7 +229,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747314648875</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="start frontend">
+      <option name="closed" value="true" />
+      <created>1747345199610</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747345199610</updated>
+    </task>
+    <task id="LOCAL-00013" summary="start frontend">
+      <option name="closed" value="true" />
+      <created>1747345224589</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1747345224589</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +271,7 @@
     <MESSAGE value="postrgrass working, all search finished" />
     <MESSAGE value="now all main backend finish. Add check 4 admin (Only admins can add+edite" />
     <MESSAGE value="test tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="test tests" />
+    <MESSAGE value="start frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="start frontend" />
   </component>
 </project>
