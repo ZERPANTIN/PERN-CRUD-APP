@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="now all main backend finish. Add check 4 admin (Only admins can add+edite">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="test tests" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747312063963</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test tests">
+      <option name="closed" value="true" />
+      <created>1747314648875</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747314648875</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +209,7 @@
     <MESSAGE value="Routers started working without &quot;crutches&quot;" />
     <MESSAGE value="postrgrass working, all search finished" />
     <MESSAGE value="now all main backend finish. Add check 4 admin (Only admins can add+edite" />
-    <option name="LAST_COMMIT_MESSAGE" value="now all main backend finish. Add check 4 admin (Only admins can add+edite" />
+    <MESSAGE value="test tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="test tests" />
   </component>
 </project>
