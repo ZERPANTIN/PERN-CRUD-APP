@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="test tests" />
+    <list default="true" id="d24eaeeb-d000-4844-b226-9525632ed333" name="Changes" comment="test tests">
+      <change afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/AppRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/MyPrinters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/PrinterPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/utils/consts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/test/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,34 +60,76 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.brandRouter.js.executor&quot;: &quot;Debug&quot;,
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.14.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.14.1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.App.js.executor": "Run",
+    "Node.js.Server.executor": "Run",
+    "Node.js.brandRouter.js.executor": "Debug",
+    "Node.js.index.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "22.14.0",
+    "javascript.nodejs.core.library.typings.version": "22.14.1",
+    "last_opened_file_path": "C:/Users/ZERPANTIN/Documents/ВУЗ/Web/kursach2.0/server/index.js",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Client.executor": "Run",
+    "npm.Server.executor": "Run",
+    "npm.stars.executor": "Run",
+    "npm.start.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ZERPANTIN\Documents\ВУЗ\Web\kursach2.0\client\src" />
       <recent name="C:\Users\ZERPANTIN\Documents\ВУЗ\Web\kursach2.0\server" />
     </key>
+  </component>
+  <component name="RunManager" selected="Compound.Full Project">
+    <configuration name="Full Project" type="CompoundRunConfigurationType">
+      <toRun name="Client" type="js.build_tools.npm" />
+      <toRun name="Server" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Server" type="NodeJSConfigurationType" path-to-js-file="server/index.js" working-dir="$PROJECT_DIR$">
+      <envs>
+        <env name="PORT" value="5000 DB_NAME=new_kursach_db DB_USER=ZERPANTIN DB_PASSWORD=1234 DB_HOST=localhost DB_PORT=5432 SECRET_KEY=thissecretkeywasburnbyGOYDA" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="Client" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Compound.Full Project" />
+      <item itemvalue="Node.js.Server" />
+      <item itemvalue="npm.Server" />
+      <item itemvalue="npm.Client" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
