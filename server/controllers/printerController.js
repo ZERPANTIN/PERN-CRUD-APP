@@ -79,6 +79,24 @@ class PrinterController {
         )
         return res.json(printer)
     }
+    async delete(req, res, next) {
+        try {
+            const {id} = req.params
+            if (!id) throw ApiError.badRequest('Не указан ID принтера')
+
+            // 1. Удаляем связанные характеристики
+            await Printer_INFO.destroy({where: {printerId: id}})
+
+            // 2. Удаляем сам принтер
+            const deleted = await Printer.destroy({where: {id}})
+
+            if (!deleted) throw ApiError.notFound('Принтер не найден')
+
+            return res.json({success: true})
+        } catch (e) {
+            next(e)
+        }
+    }
 }
 
 module.exports = new PrinterController()

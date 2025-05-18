@@ -1,15 +1,28 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Card, Col, Container, Image, Row} from "react-bootstrap";
 import bigStar from '../assets/bigStar.png'
-import {useParams} from 'react-router-dom'
-import {fetchOnePrinter} from "../http/printerAPI";
+import {useParams, useNavigate} from 'react-router-dom' // Добавили useNavigate
+import {fetchOnePrinter, deletePrinter} from "../http/printerAPI"; // Добавили deletePrinter
 
 const PrinterPage = () => {
     const [printer, setPrinter] = useState({info: []})
     const {id} = useParams()
+    const navigate = useNavigate() // Добавили навигацию
+
     useEffect(() => {
         fetchOnePrinter(id).then(data => setPrinter(data))
-    }, [])
+    }, [id]) // Добавили id в зависимости
+
+    const handleDelete = async () => {
+        if (window.confirm('Вы действительно хотите удалить этот принтер?')) {
+            try {
+                await deletePrinter(id)
+                navigate('/') // Переход на главную после удаления
+            } catch (e) {
+                alert('Ошибка при удалении: ' + e.response?.data?.message)
+            }
+        }
+    }
 
     return (
         <Container className="mt-3">
@@ -35,6 +48,13 @@ const PrinterPage = () => {
                     >
                         <h3>От: {printer.price} руб.</h3>
                         <Button variant={"outline-dark"}>Добавить в корзину</Button>
+                        <Button
+                            variant={"outline-danger"}
+                            onClick={handleDelete}
+                            className="mt-2"
+                        >
+                            Удалить принтер
+                        </Button>
                     </Card>
                 </Col>
             </Row>

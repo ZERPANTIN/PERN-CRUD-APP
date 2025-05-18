@@ -16,14 +16,14 @@ const Shop = observer(() => {
     useEffect(() => {
         fetchPrint_Technologys().then(data => printer.setPrint_Technologys(data))
         fetchBrands().then(data => printer.setBrands(data))
-        fetchPrinters(null, null, 1, 2).then(data => {
+        fetchPrinters(null, null, 1, 3).then(data => {
             printer.setPrinters(data.rows)
             printer.setTotalCount(data.count)
         })
     }, [])
 
     useEffect(() => {
-        fetchPrinters(printer.selectedPrint_Technology.id, printer.selectedBrand.id, printer.page, 2).then(data => {
+        fetchPrinters(printer.selectedPrint_Technology.id, printer.selectedBrand.id, printer.page, 3    ).then(data => {
             printer.setPrinters(data.rows)
             printer.setTotalCount(data.count)
         })

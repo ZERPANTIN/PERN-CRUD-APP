@@ -49,3 +49,13 @@ export const fetchOnePrinter = async (id) => {
     const {data} = await $host.get('api/printer/' + id)
     return data
 }
+
+export const deletePrinter = async (id) => {
+    try {
+        const {data} = await $authHost.delete(`api/printer/${id}`)
+        return data
+    } catch (e) {
+        console.error('Delete printer error:', e.response?.data)
+        throw e
+    }
+}
