@@ -17,7 +17,7 @@ const AppRouter = observer(() => {
             {publicRoutes.map(({path, Component}) =>
                 <Route key={path} path={path} component={Component} exact/>
             )}
-            <Redirect to={SHOP_ROUTE}/>
+            <Route to={SHOP_ROUTE}/>
         </Routes>
     );
 });
