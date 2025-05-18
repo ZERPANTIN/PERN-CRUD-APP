@@ -7,7 +7,7 @@ const printerRouter = require('./printerRouter')
 const userRouter = require('./userRouter')
 
 router.use('/user', userRouter)
-router.use('/print_technology', print_technologyRouter)
+router.use('/print_technology', print_technologyRouter);
 router.use('/brand', brandRouter)
 router.use('/printer', printerRouter)
 

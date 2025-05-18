@@ -22,6 +22,9 @@ const Brand = sequelize.define('brand', {
 const printTechnology = sequelize.define('printTechnology', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     name: { type: DataTypes.STRING, unique: true, allowNull: false }
+}, {
+    tableName: 'print_technologies', // Явное указание имени таблицы в БД
+    timestamps: false // Отключаем автоматические поля createdAt/updatedAt
 });
 
 const Printer = sequelize.define('printer', {

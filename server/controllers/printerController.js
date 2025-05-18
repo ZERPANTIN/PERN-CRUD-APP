@@ -1,25 +1,45 @@
 const uuid = require('uuid')
 const path = require('path')
+const fs = require('fs')
 const {Printer, Printer_INFO} = require('../models/models')
 const ApiError = require('../error/ApiError')
 
 class PrinterController {
     async create(req, res, next) {
         try {
-            let {name, price, brandId, printTechnologyId, info} = req.body
+            let {name, price, brandId, print_technologyId, info} = req.body // Исправлено на print_technologyId
             const {img} = req.files
-            let fileName = uuid.v4() + ".jpg"
-            img.mv(path.resolve(__dirname, '..', 'static', fileName))
-            const printer = await Printer.create({name, price, brandId, printTechnologyId, img: fileName});
 
-            if(info){
+            // Проверка и создание папки static
+            const staticPath = path.resolve(__dirname, '..', 'static')
+            if (!fs.existsSync(staticPath)) {
+                fs.mkdirSync(staticPath, { recursive: true })
+            }
+
+            // Генерация имени файла
+            let fileName = uuid.v4() + path.extname(img.name)
+            await img.mv(path.resolve(staticPath, fileName))
+
+            // Создание принтера
+            const printer = await Printer.create({
+                name,
+                price,
+                brandId,
+                printTechnologyId: print_technologyId, // Маппинг полей
+                img: fileName
+            })
+
+            // Обработка характеристик
+            if (info) {
                 info = JSON.parse(info)
-                info.forEach(i =>
-                    Printer_INFO.create({
-                        title: i.title,
-                        description: i.description,
-                        printerId: printer.id
-                    })
+                await Promise.all(
+                    info.map(i =>
+                        Printer_INFO.create({
+                            title: i.title,
+                            description: i.description,
+                            printerId: printer.id
+                        })
+                    )
                 )
             }
 
@@ -27,7 +47,6 @@ class PrinterController {
         } catch (e) {
             next(ApiError.badRequest(e.message))
         }
-
     }
 
     async getAll(req, res) {

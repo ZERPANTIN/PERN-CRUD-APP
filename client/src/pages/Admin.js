@@ -1,20 +1,20 @@
 import React, {useState} from 'react';
 import {Button, Container} from "react-bootstrap";
 import CreateBrand from "../components/modals/CreateBrand";
-import CreateDevice from "../components/modals/CreateDevice";
-import CreateType from "../components/modals/CreateType";
+import CreatePrinter from "../components/modals/CreatePrinter";
+import CreatePrint_Technology from "../components/modals/CreatePrint_Technology";
 
 const Admin = () => {
     const [brandVisible, setBrandVisible] = useState(false)
-    const [typeVisible, setTypeVisible] = useState(false)
-    const [deviceVisible, setDeviceVisible] = useState(false)
+    const [print_technologyVisible, setPrint_TechnologyVisible] = useState(false)
+    const [printerVisible, setPrinterVisible] = useState(false)
 
     return (
         <Container className="d-flex flex-column">
             <Button
                 variant={"outline-dark"}
                 className="mt-4 p-2"
-                onClick={() => setTypeVisible(true)}
+                onClick={() => setPrint_TechnologyVisible(true)}
             >
                 Добавить тип
             </Button>
@@ -28,13 +28,13 @@ const Admin = () => {
             <Button
                 variant={"outline-dark"}
                 className="mt-4 p-2"
-                onClick={() => setDeviceVisible(true)}
+                onClick={() => setPrinterVisible(true)}
             >
                 Добавить устройство
             </Button>
             <CreateBrand show={brandVisible} onHide={() => setBrandVisible(false)}/>
-            <CreateDevice show={deviceVisible} onHide={() => setDeviceVisible(false)}/>
-            <CreateType show={typeVisible} onHide={() => setTypeVisible(false)}/>
+            <CreatePrinter show={printerVisible} onHide={() => setPrinterVisible(false)}/>
+            <CreatePrint_Technology show={print_technologyVisible} onHide={() => setPrint_TechnologyVisible(false)}/>
         </Container>
     );
 };

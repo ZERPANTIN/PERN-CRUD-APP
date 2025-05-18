@@ -7,8 +7,9 @@ const fileUpload = require('express-fileupload');
 const router = require('./routes/index');
 const errorHandler = require('./middleware/ErrorHandlingMiddleware');
 const path = require('path');
+const print_technologyRouter = require('./routes/print_technologyRouter');
 
-const PORT = process.env.PORT || 3000; //Вдруг не стартанёт из .env
+const PORT = process.env.PORT || 3001; //Вдруг не стартанёт из .env
 
 const app = express();
 app.use(cors())

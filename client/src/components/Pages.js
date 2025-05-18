@@ -4,8 +4,8 @@ import {Context} from "../index";
 import {Pagination} from "react-bootstrap";
 
 const Pages = observer(() => {
-    const {device} = useContext(Context)
-    const pageCount = Math.ceil(device.totalCount / device.limit)
+    const {printer} = useContext(Context)
+    const pageCount = Math.ceil(printer.totalCount / printer.limit)
     const pages = []
 
     for (let i = 0; i < pageCount; i++) {
@@ -17,8 +17,8 @@ const Pages = observer(() => {
             {pages.map(page =>
                 <Pagination.Item
                     key={page}
-                    active={device.page === page}
-                    onClick={() => device.setPage(page)}
+                    active={printer.page === page}
+                    onClick={() => printer.setPage(page)}
                 >
                     {page}
                 </Pagination.Item>
