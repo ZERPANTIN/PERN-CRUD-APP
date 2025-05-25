@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Card, Col, Container, Image, Row} from "react-bootstrap";
 import bigStar from '../assets/bigStar.png'
-import {useParams, useNavigate} from 'react-router-dom' // Добавили useNavigate
-import {fetchOnePrinter, deletePrinter} from "../http/printerAPI"; // Добавили deletePrinter
+import {useParams, useNavigate} from 'react-router-dom'
+import {fetchOnePrinter, deletePrinter} from "../http/printerAPI";
 
 const PrinterPage = () => {
     const [printer, setPrinter] = useState({info: []})
@@ -21,6 +21,14 @@ const PrinterPage = () => {
             } catch (e) {
                 alert('Ошибка при удалении: ' + e.response?.data?.message)
             }
+        }
+    }
+    const handleEdit = async () => {
+        try {
+            await deletePrinter(id)
+            navigate('/') // Переход на главную после удаления
+        } catch (e) {
+            alert('Ошибка при удалении: ' + e.response?.data?.message)
         }
     }
 
@@ -47,7 +55,13 @@ const PrinterPage = () => {
                         style={{width: 300, height: 300, fontSize: 32, border: '5px solid lightgray'}}
                     >
                         <h3>От: {printer.price} руб.</h3>
-                        <Button variant={"outline-dark"}>Добавить в корзину</Button>
+                        <Button
+                            variant={"outline-info"}
+                            onClick={handleEdit}
+                            className="mt-2"
+                        >
+                            Редактировать
+                        </Button>
                         <Button
                             variant={"outline-danger"}
                             onClick={handleDelete}
